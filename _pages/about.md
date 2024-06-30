@@ -16,4 +16,4 @@ social: true # includes social icons at the bottom of the page
 ---
 
 Hi! My name is Paul. I'm a PhD Student at the University of Marburg in Germany. I'm supervised by  [Prof. Dr. Christin Seifert](https://aix-group.github.io/cseifert/). 
-My research focuses on factual knowledge in large language models (probing, editing, detcting edits). 
+My research focuses on factual knowledge in large language models (probing, editing, detecting edits). 
