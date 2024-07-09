@@ -9,6 +9,7 @@
       archivePrefix={arXiv},
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2405.02765}, 
+      abstract = "Knowledge editing methods (KEs) can update language models' obsolete or inaccurate knowledge learned from pre-training. However, KEs can be used for malicious applications, e.g., inserting misinformation and toxic content. Knowing whether a generated output is based on edited knowledge or first-hand knowledge from pre-training can increase users' trust in generative models and provide more transparency. Driven by this, we propose a novel task: detecting edited knowledge in language models. Given an edited model and a fact retrieved by a prompt from an edited model, the objective is to classify the knowledge as either unedited (based on the pre-training), or edited (based on subsequent editing). We instantiate the task with four KEs, two LLMs, and two datasets. Additionally, we propose using the hidden state representations and the probability distributions as features for the detection. Our results reveal that, using these features as inputs to a simple AdaBoost classifiers establishes a strong baseline. This classifier requires only a limited amount of data and maintains its performance even in cross-domain settings. Last, we find it more challenging to distinguish edited knowledge from unedited but related knowledge, highlighting the need for further research. Our work lays the groundwork for addressing malicious model editing, which is a critical challenge associated with the strong generative capabilities of LLMs.",
 }
 
 
