@@ -1,85 +1,85 @@
 ---
 ---
 @misc{youssef-etal-2024-reversing,
-      title={Can We Reverse In-Context Knowledge Edits?}, 
-      author={Paul Youssef and Zhixue Zhao and Jörg Schlötterer and Christin Seifert},
-      year={2024},
-      eprint={2410.12586},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2410.12586}, 
-      abstract="In-context knowledge editing (IKE) enables efficient modification of large language model (LLM) outputs without parameter changes and at zero-cost. However, it can be misused to manipulate responses opaquely, e.g., insert misinformation or offensive content. Such malicious interventions could be incorporated into high-level wrapped APIs where the final input prompt is not shown to end-users. To address this issue, we investigate the detection and reversal of IKE-edits. First, we demonstrate that IKE-edits can be detected with high accuracy (F1 > 80\%) using only the top-10 output probabilities of the next token, even in a black-box setting, e.g. proprietary LLMs with limited output information. Further, we introduce the novel task of reversing IKE-edits using specially tuned reversal tokens. We explore using both continuous and discrete reversal tokens, achieving over 80\% accuracy in recovering original, unedited outputs across multiple LLMs. Our continuous reversal tokens prove particularly effective, with minimal impact on unedited prompts. Through analysis of output distributions, attention patterns, and token rankings, we provide insights into IKE's effects on LLMs and how reversal tokens mitigate them. This work represents a significant step towards enhancing LLM resilience against potential misuse of in-context editing, improving their transparency and trustworthiness. "
+  title         = {Can We Reverse In-Context Knowledge Edits?},
+  author        = {Paul Youssef and Zhixue Zhao and Jörg Schlötterer and Christin Seifert},
+  year          = {2024},
+  eprint        = {2410.12586},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2410.12586},
+  abstract      = {In-context knowledge editing (IKE) enables efficient modification of large language model (LLM) outputs without parameter changes and at zero-cost. However, it can be misused to manipulate responses opaquely, e.g., insert misinformation or offensive content. Such malicious interventions could be incorporated into high-level wrapped APIs where the final input prompt is not shown to end-users. To address this issue, we investigate the detection and reversal of IKE-edits. First, we demonstrate that IKE-edits can be detected with high accuracy (F1 > 80\%) using only the top-10 output probabilities of the next token, even in a black-box setting, e.g. proprietary LLMs with limited output information. Further, we introduce the novel task of reversing IKE-edits using specially tuned reversal tokens. We explore using both continuous and discrete reversal tokens, achieving over 80\% accuracy in recovering original, unedited outputs across multiple LLMs. Our continuous reversal tokens prove particularly effective, with minimal impact on unedited prompts. Through analysis of output distributions, attention patterns, and token rankings, we provide insights into IKE's effects on LLMs and how reversal tokens mitigate them. This work represents a significant step towards enhancing LLM resilience against potential misuse of in-context editing, improving their transparency and trustworthiness. }
 }
 
 
 @misc{youssef-etal-2024-detecting,
-      title={Detecting Edited Knowledge in Language Models}, 
-      author={Paul Youssef and Zhixue Zhao and Jörg Schlötterer and Christin Seifert},
-      year={2024},
-      eprint={2405.02765},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2405.02765}, 
-      abstract = "Knowledge editing methods (KEs) can update language models' obsolete or inaccurate knowledge learned from pre-training. However, KEs can be used for malicious applications, e.g., inserting misinformation and toxic content. Knowing whether a generated output is based on edited knowledge or first-hand knowledge from pre-training can increase users' trust in generative models and provide more transparency. Driven by this, we propose a novel task: detecting edited knowledge in language models. Given an edited model and a fact retrieved by a prompt from an edited model, the objective is to classify the knowledge as either unedited (based on the pre-training), or edited (based on subsequent editing). We instantiate the task with four KEs, two LLMs, and two datasets. Additionally, we propose using the hidden state representations and the probability distributions as features for the detection. Our results reveal that, using these features as inputs to a simple AdaBoost classifiers establishes a strong baseline. This classifier requires only a limited amount of data and maintains its performance even in cross-domain settings. Last, we find it more challenging to distinguish edited knowledge from unedited but related knowledge, highlighting the need for further research. Our work lays the groundwork for addressing malicious model editing, which is a critical challenge associated with the strong generative capabilities of LLMs.",
+  title         = {Detecting Edited Knowledge in Language Models},
+  author        = {Paul Youssef and Zhixue Zhao and Jörg Schlötterer and Christin Seifert},
+  year          = {2024},
+  eprint        = {2405.02765},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2405.02765},
+  abstract      = {Knowledge editing methods (KEs) can update language models' obsolete or inaccurate knowledge learned from pre-training. However, KEs can be used for malicious applications, e.g., inserting misinformation and toxic content. Knowing whether a generated output is based on edited knowledge or first-hand knowledge from pre-training can increase users' trust in generative models and provide more transparency. Driven by this, we propose a novel task: detecting edited knowledge in language models. Given an edited model and a fact retrieved by a prompt from an edited model, the objective is to classify the knowledge as either unedited (based on the pre-training), or edited (based on subsequent editing). We instantiate the task with four KEs, two LLMs, and two datasets. Additionally, we propose using the hidden state representations and the probability distributions as features for the detection. Our results reveal that, using these features as inputs to a simple AdaBoost classifiers establishes a strong baseline. This classifier requires only a limited amount of data and maintains its performance even in cross-domain settings. Last, we find it more challenging to distinguish edited knowledge from unedited but related knowledge, highlighting the need for further research. Our work lays the groundwork for addressing malicious model editing, which is a critical challenge associated with the strong generative capabilities of LLMs.}
 }
 
 
 @inproceedings{youssef-etal-2024-queen,
-    title = "The Queen of {E}ngland is not {E}ngland{'}s Queen: On the Lack of Factual Coherency in {PLM}s",
-    author = {Youssef, Paul  and
-      Schl{\"o}tterer, J{\"o}rg  and
-      Seifert, Christin},
-    editor = "Graham, Yvette  and
-      Purver, Matthew",
-    booktitle = "Findings of the Association for Computational Linguistics: EACL 2024",
-    month = mar,
-    year = "2024",
-    address = "St. Julian{'}s, Malta",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2024.findings-eacl.155",
-    pages = "2342--2354",
-    abstract = "Factual knowledge encoded in Pre-trained Language Models (PLMs) enriches their representations and justifies their use as knowledge bases. Previous work has focused on probing PLMs for factual knowledge by measuring how often they can correctly predict an {\_}object{\_} entity given a subject and a relation, and improving fact retrieval by optimizing the prompts used for querying PLMs. In this work, we consider a complementary aspect, namely the coherency of factual knowledge in PLMs, i.e., how often can PLMs predict the {\_}subject{\_} entity given its initial prediction of the object entity. This goes beyond evaluating how much PLMs know, and focuses on the internal state of knowledge inside them. Our results indicate that PLMs have low coherency using manually written, optimized and paraphrased prompts, but including an evidence paragraph leads to substantial improvement. This shows that PLMs fail to model inverse relations and need further enhancements to be able to handle retrieving facts from their parameters in a coherent manner, and to be considered as knowledge bases.",
+  title     = {The Queen of {E}ngland is not {E}ngland{'}s Queen: On the Lack of Factual Coherency in {PLM}s},
+  author    = {Youssef, Paul  and
+               Schl{\"o}tterer, J{\"o}rg  and
+               Seifert, Christin},
+  editor    = {Graham, Yvette  and
+               Purver, Matthew},
+  booktitle = {Findings of the Association for Computational Linguistics: EACL 2024},
+  month     = mar,
+  year      = {2024},
+  address   = {St. Julian{'}s, Malta},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2024.findings-eacl.155},
+  pages     = {2342--2354},
+  abstract  = {Factual knowledge encoded in Pre-trained Language Models (PLMs) enriches their representations and justifies their use as knowledge bases. Previous work has focused on probing PLMs for factual knowledge by measuring how often they can correctly predict an {\_}object{\_} entity given a subject and a relation, and improving fact retrieval by optimizing the prompts used for querying PLMs. In this work, we consider a complementary aspect, namely the coherency of factual knowledge in PLMs, i.e., how often can PLMs predict the {\_}subject{\_} entity given its initial prediction of the object entity. This goes beyond evaluating how much PLMs know, and focuses on the internal state of knowledge inside them. Our results indicate that PLMs have low coherency using manually written, optimized and paraphrased prompts, but including an evidence paragraph leads to substantial improvement. This shows that PLMs fail to model inverse relations and need further enhancements to be able to handle retrieving facts from their parameters in a coherent manner, and to be considered as knowledge bases.}
 }
 
 
 @inproceedings{youssef-etal-2023-give,
-    title = "Give Me the Facts! A Survey on Factual Knowledge Probing in Pre-trained Language Models",
-    author = {Youssef, Paul  and
-      Kora{\c{s}}, Osman  and
-      Li, Meijie  and
-      Schl{\"o}tterer, J{\"o}rg  and
-      Seifert, Christin},
-    editor = "Bouamor, Houda  and
-      Pino, Juan  and
-      Bali, Kalika",
-    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2023",
-    month = dec,
-    year = "2023",
-    address = "Singapore",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2023.findings-emnlp.1043",
-    doi = "10.18653/v1/2023.findings-emnlp.1043",
-    pages = "15588--15605",
-    abstract = "Pre-trained Language Models (PLMs) are trained on vast unlabeled data, rich in world knowledge. This fact has sparked the interest of the community in quantifying the amount of factual knowledge present in PLMs, as this explains their performance on downstream tasks, and potentially justifies their use as knowledge bases. In this work, we survey methods and datasets that are used to probe PLMs for factual knowledge. Our contributions are: (1) We propose a categorization scheme for factual probing methods that is based on how their inputs, outputs and the probed PLMs are adapted; (2) We provide an overview of the datasets used for factual probing; (3) We synthesize insights about knowledge retention and prompt optimization in PLMs, analyze obstacles to adopting PLMs as knowledge bases and outline directions for future work.",
+  title     = {Give Me the Facts! A Survey on Factual Knowledge Probing in Pre-trained Language Models},
+  author    = {Youssef, Paul  and
+               Kora{\c{s}}, Osman  and
+               Li, Meijie  and
+               Schl{\"o}tterer, J{\"o}rg  and
+               Seifert, Christin},
+  editor    = {Bouamor, Houda  and
+               Pino, Juan  and
+               Bali, Kalika},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2023},
+  month     = dec,
+  year      = {2023},
+  address   = {Singapore},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2023.findings-emnlp.1043},
+  doi       = {10.18653/v1/2023.findings-emnlp.1043},
+  pages     = {15588--15605},
+  abstract  = {Pre-trained Language Models (PLMs) are trained on vast unlabeled data, rich in world knowledge. This fact has sparked the interest of the community in quantifying the amount of factual knowledge present in PLMs, as this explains their performance on downstream tasks, and potentially justifies their use as knowledge bases. In this work, we survey methods and datasets that are used to probe PLMs for factual knowledge. Our contributions are: (1) We propose a categorization scheme for factual probing methods that is based on how their inputs, outputs and the probed PLMs are adapted; (2) We provide an overview of the datasets used for factual probing; (3) We synthesize insights about knowledge retention and prompt optimization in PLMs, analyze obstacles to adopting PLMs as knowledge bases and outline directions for future work.}
 }
 
 @inproceedings{youssef-etal-2023-privacy,
-    title = "Privacy-Preserving Knowledge Transfer through Partial Parameter Sharing",
-    author = {Youssef, Paul  and
-      Schl{\"o}tterer, J{\"o}rg  and
-      Seifert, Christin},
-    editor = "Naumann, Tristan  and
-      Ben Abacha, Asma  and
-      Bethard, Steven  and
-      Roberts, Kirk  and
-      Rumshisky, Anna",
-    booktitle = "Proceedings of the 5th Clinical Natural Language Processing Workshop",
-    month = jul,
-    year = "2023",
-    address = "Toronto, Canada",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2023.clinicalnlp-1.3",
-    doi = "10.18653/v1/2023.clinicalnlp-1.3",
-    pages = "19--23",
-    abstract = "Valuable datasets that contain sensitive information are not shared due to privacy and copyright concerns. This hinders progress in many areas and prevents the use of machine learning solutions to solve relevant tasks. One possible solution is sharing models that are trained on such datasets. However, this is also associated with potential privacy risks due to data extraction attacks. In this work, we propose a solution based on sharing parts of the model{'}s parameters, and using a proxy dataset for complimentary knowledge transfer. Our experiments show encouraging results, and reduced risk to potential training data identification attacks. We present a viable solution to sharing knowledge with data-disadvantaged parties, that do not have the resources to produce high-quality data, with reduced privacy risks to the sharing parties. We make our code publicly available.",
+  title     = {Privacy-Preserving Knowledge Transfer through Partial Parameter Sharing},
+  author    = {Youssef, Paul  and
+               Schl{\"o}tterer, J{\"o}rg  and
+               Seifert, Christin},
+  editor    = {Naumann, Tristan  and
+               Ben Abacha, Asma  and
+               Bethard, Steven  and
+               Roberts, Kirk  and
+               Rumshisky, Anna},
+  booktitle = {Proceedings of the 5th Clinical Natural Language Processing Workshop},
+  month     = jul,
+  year      = {2023},
+  address   = {Toronto, Canada},
+  publisher = {Association for Computational Linguistics},
+  url       = {https://aclanthology.org/2023.clinicalnlp-1.3},
+  doi       = {10.18653/v1/2023.clinicalnlp-1.3},
+  pages     = {19--23},
+  abstract  = {Valuable datasets that contain sensitive information are not shared due to privacy and copyright concerns. This hinders progress in many areas and prevents the use of machine learning solutions to solve relevant tasks. One possible solution is sharing models that are trained on such datasets. However, this is also associated with potential privacy risks due to data extraction attacks. In this work, we propose a solution based on sharing parts of the model{'}s parameters, and using a proxy dataset for complimentary knowledge transfer. Our experiments show encouraging results, and reduced risk to potential training data identification attacks. We present a viable solution to sharing knowledge with data-disadvantaged parties, that do not have the resources to produce high-quality data, with reduced privacy risks to the sharing parties. We make our code publicly available.}
 }
