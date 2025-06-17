@@ -1,26 +1,68 @@
 ---
 ---
-@misc{youssef-etal-2024-reversing,
-  title         = {Can We Reverse In-Context Knowledge Edits?},
-  author        = {Paul Youssef and Zhixue Zhao and Jörg Schlötterer and Christin Seifert},
-  year          = {2024},
-  eprint        = {2410.12586},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.CL},
-  url           = {https://arxiv.org/abs/2410.12586},
-  abstract      = {In-context knowledge editing (IKE) enables efficient modification of large language model (LLM) outputs without parameter changes and at zero-cost. However, it can be misused to manipulate responses opaquely, e.g., insert misinformation or offensive content. Such malicious interventions could be incorporated into high-level wrapped APIs where the final input prompt is not shown to end-users. To address this issue, we investigate the detection and reversal of IKE-edits. First, we demonstrate that IKE-edits can be detected with high accuracy (F1 > 80\%) using only the top-10 output probabilities of the next token, even in a black-box setting, e.g. proprietary LLMs with limited output information. Further, we introduce the novel task of reversing IKE-edits using specially tuned reversal tokens. We explore using both continuous and discrete reversal tokens, achieving over 80\% accuracy in recovering original, unedited outputs across multiple LLMs. Our continuous reversal tokens prove particularly effective, with minimal impact on unedited prompts. Through analysis of output distributions, attention patterns, and token rankings, we provide insights into IKE's effects on LLMs and how reversal tokens mitigate them. This work represents a significant step towards enhancing LLM resilience against potential misuse of in-context editing, improving their transparency and trustworthiness. }
+@misc{youssef2025tracingreversingrankonemodel,
+      title={Tracing and Reversing Rank-One Model Edits}, 
+      author={Paul Youssef and Zhixue Zhao and Christin Seifert and Jörg Schlötterer},
+      year={2025},
+      eprint={2505.20819},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.20819}, 
+      abstract={Knowledge editing methods (KEs) are a cost-effective way to update the factual content of large language models (LLMs), but they pose a dual-use risk. While KEs are beneficial for updating outdated or incorrect information, they can be exploited maliciously to implant misinformation or bias. In order to defend against these types of malicious manipulation, we need robust techniques that can reliably detect, interpret, and mitigate adversarial edits. This work investigates the traceability and reversibility of knowledge edits, focusing on the widely used Rank-One Model Editing (ROME) method. We first show that ROME introduces distinctive distributional patterns in the edited weight matrices, which can serve as effective signals for locating the edited weights. Second, we show that these altered weights can reliably be used to predict the edited factual relation, enabling partial reconstruction of the modified fact. Building on this, we propose a method to infer the edited object entity directly from the modified weights, without access to the editing prompt, achieving over 95% accuracy. Finally, we demonstrate that ROME edits can be reversed, recovering the model's original outputs with   80% accuracy. Our findings highlight the feasibility of detecting, tracing, and reversing edits based on the edited weights, offering a robust framework for safeguarding LLMs against adversarial manipulations. }
+}
+
+@misc{youssef2025positioneditinglargelanguage,
+      title={Position: Editing Large Language Models Poses Serious Safety Risks}, 
+      author={Paul Youssef and Zhixue Zhao and Daniel Braun and Jörg Schlötterer and Christin Seifert},
+      year={2025},
+      eprint={2502.02958},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2502.02958}, 
+      abstract={Large Language Models (LLMs) contain large amounts of facts about the world. These facts can become outdated over time, which has led to the development of knowledge editing methods (KEs) that can change specific facts in LLMs with limited side effects. This position paper argues that editing LLMs poses serious safety risks that have been largely overlooked. First, we note the fact that KEs are widely available, computationally inexpensive, highly performant, and stealthy makes them an attractive tool for malicious actors. Second, we discuss malicious use cases of KEs, showing how KEs can be easily adapted for a variety of malicious purposes. Third, we highlight vulnerabilities in the AI ecosystem that allow unrestricted uploading and downloading of updated models without verification. Fourth, we argue that a lack of social and institutional awareness exacerbates this risk, and discuss the implications for different stakeholders. We call on the community to (i) research tamper-resistant models and countermeasures against malicious model editing, and (ii) actively engage in securing the AI ecosystem. }
 }
 
 
-@misc{youssef-etal-2024-detecting,
-  title         = {Detecting Edited Knowledge in Language Models},
-  author        = {Paul Youssef and Zhixue Zhao and Jörg Schlötterer and Christin Seifert},
-  year          = {2024},
-  eprint        = {2405.02765},
-  archiveprefix = {arXiv},
-  primaryclass  = {cs.CL},
-  url           = {https://arxiv.org/abs/2405.02765},
-  abstract      = {Knowledge editing methods (KEs) can update language models' obsolete or inaccurate knowledge learned from pre-training. However, KEs can be used for malicious applications, e.g., inserting misinformation and toxic content. Knowing whether a generated output is based on edited knowledge or first-hand knowledge from pre-training can increase users' trust in generative models and provide more transparency. Driven by this, we propose a novel task: detecting edited knowledge in language models. Given an edited model and a fact retrieved by a prompt from an edited model, the objective is to classify the knowledge as either unedited (based on the pre-training), or edited (based on subsequent editing). We instantiate the task with four KEs, two LLMs, and two datasets. Additionally, we propose using the hidden state representations and the probability distributions as features for the detection. Our results reveal that, using these features as inputs to a simple AdaBoost classifiers establishes a strong baseline. This classifier requires only a limited amount of data and maintains its performance even in cross-domain settings. Last, we find it more challenging to distinguish edited knowledge from unedited but related knowledge, highlighting the need for further research. Our work lays the groundwork for addressing malicious model editing, which is a critical challenge associated with the strong generative capabilities of LLMs.}
+@inproceedings{youssef-etal-2025-make,
+    title = "How to Make {LLM}s Forget: On Reversing In-Context Knowledge Edits",
+    author = {Youssef, Paul  and
+      Zhao, Zhixue  and
+      Schl{\"o}tterer, J{\"o}rg  and
+      Seifert, Christin},
+    editor = "Chiruzzo, Luis  and
+      Ritter, Alan  and
+      Wang, Lu",
+    booktitle = "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    month = apr,
+    year = "2025",
+    address = "Albuquerque, New Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.naacl-long.630/",
+    doi = "10.18653/v1/2025.naacl-long.630",
+    pages = "12656--12669",
+    ISBN = "979-8-89176-189-6",
+    abstract = "In-context knowledge editing (IKE) enables efficient modification of large language model (LLM) outputs without parameter changes and at zero-cost. However, it can be misused to manipulate responses opaquely, e.g., insert misinformation or offensive content. Such malicious interventions could be incorporated into high-level wrapped APIs where the final input prompt is not shown to end-users. To address this issue, we investigate the detection and reversal of IKE-edits. First, we demonstrate that IKE-edits can be detected with high accuracy (F1 {\ensuremath{>}} 80{\%}) using only the top-10 output probabilities of the next token, even in a black-box setting, e.g. proprietary LLMs with limited output information. Further, we introduce the novel task of reversing IKE-edits using specially tuned reversal tokens. We explore using both continuous and discrete reversal tokens, achieving over 80{\%} accuracy in recovering original, unedited outputs across multiple LLMs. Our continuous reversal tokens prove particularly effective, with minimal impact on unedited prompts. Through analysis of output distributions, attention patterns, and token rankings, we provide insights into IKE{'}s effects on LLMs and how reversal tokens mitigate them. This work represents a significant step towards enhancing LLM resilience against potential misuse of in-context editing, improving their transparency and trustworthiness."
+}
+
+@inproceedings{youssef-etal-2025-fact,
+    title = "Has this Fact been Edited? Detecting Knowledge Edits in Language Models",
+    author = {Youssef, Paul  and
+      Zhao, Zhixue  and
+      Seifert, Christin  and
+      Schl{\"o}tterer, J{\"o}rg},
+    editor = "Chiruzzo, Luis  and
+      Ritter, Alan  and
+      Wang, Lu",
+    booktitle = "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+    month = apr,
+    year = "2025",
+    address = "Albuquerque, New Mexico",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.naacl-long.492/",
+    doi = "10.18653/v1/2025.naacl-long.492",
+    pages = "9768--9784",
+    ISBN = "979-8-89176-189-6",
+    abstract = "Knowledge editing methods (KEs) can update language models' obsolete or inaccurate knowledge learned from pre-training. However, KEs can be used for malicious applications, e.g., inserting misinformation and toxic content. Knowing whether a generated output is based on edited knowledge or first-hand knowledge from pre-training can increase users' trust in generative models and provide more transparency. Driven by this, we propose a novel task: detecting knowledge edits in language models. Given an edited model and a fact retrieved by a prompt from an edited model, the objective is to classify the knowledge as either unedited (based on the pre-training), or edited (based on subsequent editing). We instantiate the task with four KEs, two large language models (LLMs), and two datasets. Additionally, we propose using hidden state representations and probability distributions as features for the detection model. Our results reveal that using these features as inputs to a simple AdaBoost classifier establishes a strong baseline. This baseline classifier requires a small amount of training data and maintains its performance even in cross-domain settings. Our work lays the groundwork for addressing potential malicious model editing, which is a critical challenge associated with the strong generative capabilities of LLMs."
 }
 
 
